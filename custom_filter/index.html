@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html ng-app="filter-app">
+  <head>
+    <script type="text/javascript" src="../angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller="index">
+      <div ng-repeat="username in usernameslist" class="">{{username.name | checkmyname}}</div>
+  </body>
+</html>
