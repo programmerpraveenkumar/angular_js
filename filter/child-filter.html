@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="filter-app">
+  <head>
+    <script type="text/javascript" src="../angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  
+  </head>
+  <body ng-controller="childern_filter">
+      <input type="text" placeholder="all" name="name" ng-model="namefilter.$" value="">
+      <input type="text"  placeholder="name" name="name" ng-model="namefilter.name" value="">
+      <input type="text"   placeholder="age" name="name" ng-model="namefilter.age" value="">
+      <div ng-repeat="username in usernameslist | filter:namefilter">
+          <div class="">
+            {{username.name}}
+          </div>
+          <div class="">
+            {{username.age}}
+          </div>
+      </div>
+  </body>
+</html>

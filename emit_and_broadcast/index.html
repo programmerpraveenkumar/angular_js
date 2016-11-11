@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="emit-broadcast">
+  <head>
+    <script src="../angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <meta charset="utf-8">
+    <title>sample html </title>
+  </head>
+  <body>
+    <div ng-controller="ParentCtrl as parent" class="ng-scope">
+        <input type="button" ng-click="sendEvent()" value="Send Events to Child"/>
+      <div ng-controller="SiblingoneCtrl as sb1" class="ng-scope">
+        <input type="button" ng-click="sendEvent()" value="Send Events to Parent"/>
+      </div>
+      <div ng-controller="SiblingTwoCtrl as sib2" class="ng-scope"></div>
+    </div>
+  </body>
+</html>
